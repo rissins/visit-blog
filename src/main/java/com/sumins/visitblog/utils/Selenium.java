@@ -17,6 +17,7 @@ public class Selenium {
 
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 //
+        //
         //창안띄우고 실행
         options.addArguments("headless");
 
