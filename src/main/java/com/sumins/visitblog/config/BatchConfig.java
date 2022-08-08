@@ -1,6 +1,6 @@
 package com.sumins.visitblog.config;
 
-import com.sumins.visitblog.utils.Selenium;
+import com.sumins.visitblog.utils.SeleniumUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -14,14 +14,14 @@ import org.springframework.context.annotation.Configuration;
 @RequiredArgsConstructor
 public class BatchConfig {
 
+    private final SeleniumUtil seleniumUtil;
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
-    private final Selenium selenium;
 
 
     @Bean
-    public Job blogJob() {
-        return jobBuilderFactory.get("blogJob")
+    public Job blogPushJob() {
+        return jobBuilderFactory.get("blogPushJob")
                 .start(visitBlog())
                 .build();
     }
@@ -30,7 +30,7 @@ public class BatchConfig {
     public Step visitBlog() {
         return stepBuilderFactory.get("visitBlog")
                 .tasklet((contribution, chunkContext) -> {
-                        selenium.visitBlog();
+                        seleniumUtil.visitBlog();
                     return RepeatStatus.FINISHED;
                 })
                 .build();
