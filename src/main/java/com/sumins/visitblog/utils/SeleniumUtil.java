@@ -22,7 +22,7 @@ public class SeleniumUtil {
 
         //창안띄우고 실행
         options.addArguments("headless");
-
+        //
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://m.blog.naver.com/hera1720");
         Thread.sleep(2000);
