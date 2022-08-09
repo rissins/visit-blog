@@ -21,19 +21,21 @@ public class SeleniumUtil {
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 
         //창안띄우고 실행
-//        options.addArguments("headless");
+        options.addArguments("headless");
         //
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://m.blog.naver.com/hera1720");
         Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[2]/div[2]/div/div[2]/ul/li[1]/div[1]/div[2]/div/a")).sendKeys("\n");
-        Thread.sleep(30000);
+        driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[2]/div[2]/div/div[2]/ul/li[2]/div[2]/div[2]/div[1]/a")).sendKeys("\n");
+        Thread.sleep(36000);
         driver.navigate().back();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[2]/div[2]/div/div[2]/ul/li[2]/div[2]/div[2]/div[2]/a")).sendKeys("\n");
-        Thread.sleep(60000);
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[2]/div[2]/div/div[2]/ul/li[2]/div[1]/div[2]/div[1]/a")).sendKeys("\n");
+        Thread.sleep(76000);
+        driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[2]/div[2]/div/div[2]/ul/li[4]/div[1]/div[2]/div[1]/a")).sendKeys("\n");
+        Thread.sleep(84000);
         driver.navigate().back();
-        Thread.sleep(20000);
+        Thread.sleep(15000);
 
 
         // 브라우저 닫기
