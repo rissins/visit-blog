@@ -25,17 +25,21 @@ public class SeleniumUtil {
         //
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://m.blog.naver.com/hera1720");
-        Thread.sleep(2000);
+        Thread.sleep(2654);
         driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[2]/div[2]/div/div[2]/ul/li[2]/div[2]/div[2]/div[1]/a")).sendKeys("\n");
-        Thread.sleep(36000);
+        Thread.sleep(36153);
         driver.navigate().back();
-        Thread.sleep(5000);
+        Thread.sleep(5252);
         driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[2]/div[2]/div/div[2]/ul/li[2]/div[1]/div[2]/div[1]/a")).sendKeys("\n");
-        Thread.sleep(76000);
+        Thread.sleep(22543);
         driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[2]/div[2]/div/div[2]/ul/li[4]/div[1]/div[2]/div[1]/a")).sendKeys("\n");
-        Thread.sleep(84000);
+        Thread.sleep(34123);
         driver.navigate().back();
-        Thread.sleep(15000);
+        Thread.sleep(10321);
+        driver.navigate().refresh();
+        Thread.sleep(5532);
+        driver.navigate().refresh();
+        Thread.sleep(4378);
 
 
         // 브라우저 닫기
